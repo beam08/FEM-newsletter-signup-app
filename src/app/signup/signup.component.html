@@ -1,0 +1,56 @@
+<div class="container">
+  <main>
+    <div class="signup-form">
+      <h1>Stay updated!</h1>
+      <p>Join 60,000+ product managers receiving monthly updates on:</p>
+      <ul>
+        <li>
+          <a
+            ><img src="/assets/images/icon-list.svg" alt="check-icon" /> Product
+            discovery and building what matters</a
+          >
+        </li>
+        <li>
+          <a
+            ><img src="/assets/images/icon-list.svg" alt="check-icon" />
+            Measuring to ensure updates are a success</a
+          >
+        </li>
+        <li>
+          <a
+            ><img src="/assets/images/icon-list.svg" alt="check-icon" /> And
+            much more!</a
+          >
+        </li>
+      </ul>
+      <div class="signup-input">
+        <div class="input-labels">
+          <label for="txtEmail">Email Address</label>
+          <label class="label-invalid" *ngIf="!isValidEmail"
+            >Valid Email Required!</label
+          >
+          <label class="label-invalid" *ngIf="!isInputEmpty"
+            >Email address is required</label
+          >
+        </div>
+        <input
+          type="email"
+          [(ngModel)]="emailadd"
+          [ngClass]="{ 'input-invalid': !isValidEmail }"
+          (ngModelChange)="validateEmail(); isInputEmpty = true"
+          id="txtEmail"
+          placeholder="email@company.com"
+        />
+      </div>
+      <button class="signup-btn" (click)="navigateToSuccess(); isEmpty()">
+        Subscribe to monthly newsletter
+      </button>
+    </div>
+    <div class="signup-image">
+      <img
+        src="/assets/images/illustration-sign-up-desktop.svg"
+        alt="signup-image"
+      />
+    </div>
+  </main>
+</div>

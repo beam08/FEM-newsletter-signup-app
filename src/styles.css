@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+:root {
+  /* ### Primary */
+
+  --Tomato: hsl(4, 100%, 67%);
+
+  /* ### Neutral */
+
+  --Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+
+  --text-paragraph-desktop: 16px;
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+
+body {
+  background-color: var(--Charcoal-Grey);
+  height: 100vh;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 425px) {
+  body {
+    background-color: var(--White);
+    height: 100vh;
+  }
+}
